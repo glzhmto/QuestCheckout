@@ -257,8 +257,10 @@ public class KioskUI : MonoBehaviour
             }
             else
             {
-                text += "\nReserved 12:00 PM";
+                // in testing someone tried to pick 120, so it has to look blocked
+                text += "\nUNAVAILABLE";
                 durationTexts[i].color = new Color(0.6f, 0.6f, 0.6f);
+                durationButtons[i].image.color = new Color(0.95f, 0.95f, 0.95f);
             }
             if (durations[i] == selectedDuration) text = "> " + text;
             durationTexts[i].text = text;
@@ -266,6 +268,22 @@ public class KioskUI : MonoBehaviour
 
         // can only continue with all items checked and a duration picked
         nextButton.interactable = AllItemsChecked() && selectedDuration != -1;
+
+        // in testing people pressed next without knowing why it didn't work,
+        // so the button says what is missing
+        Text nextText = nextButton.GetComponentInChildren<Text>();
+        if (!AllItemsChecked())
+        {
+            nextText.text = "CHECK ALL 3 ITEMS TO CONTINUE";
+        }
+        else if (selectedDuration == -1)
+        {
+            nextText.text = "PICK A DURATION TO CONTINUE";
+        }
+        else
+        {
+            nextText.text = "DURATION & KIT CONFIRMED - NEXT ->";
+        }
     }
 
     bool AllItemsChecked()
