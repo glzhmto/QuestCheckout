@@ -1,6 +1,6 @@
 # Testing report
 
-Build tested: v1.0.0
+Build tested: v1.0.0 (Mac build from commit 02158fd)
 
 ## Functional cases
 | # | Case | Setup | Steps | Expected | Actual | Pass/Fail | Evidence |
@@ -36,4 +36,9 @@ Build tested: v1.0.0
 - **After / retest:** Clean, visually symmetrical, and responsive bottom bar layouts on all screens. Retested and verified in Build `v1.0.0`.
 
 ## Unresolved issues
-- None
+- "Notify me" only saves that the student asked for a notice. It does not send a real email.
+- 120 and 180 minutes are always blocked (fixed rule for the 12:00 PM class), they don't depend on a real schedule.
+- There is no return flow at the kiosk. A kit becomes available again only when its time is over, so a kit returned early still shows IN USE.
+- The times use the clock of the computer running the app.
+- The Figma uses a monospace font for small text. The app uses the default Unity font.
+- Only tested on the Mac build.
