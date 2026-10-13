@@ -67,6 +67,7 @@ public class KioskUI : MonoBehaviour
     public Button altStartButton;
 
     [Header("Testing")]
+	public GameObject testBar;
     public Button resetAButton;
     public Button resetBButton;
 
@@ -83,6 +84,8 @@ public class KioskUI : MonoBehaviour
 
     void Start()
     {
+		testBar = GameObject.Find("TestBar"); 
+
         startButton.onClick.AddListener(GoToKits);
 
         kitBackButton.onClick.AddListener(GoToStart);
@@ -135,6 +138,11 @@ public class KioskUI : MonoBehaviour
         confirmScreen.SetActive(screen == confirmScreen);
         doneScreen.SetActive(screen == doneScreen);
         alternativesScreen.SetActive(screen == alternativesScreen);
+
+		if (testBar != null)
+        {
+            testBar.SetActive(screen == startScreen);
+        }
     }
 
     // ---------- start ----------
