@@ -153,6 +153,7 @@ public class KioskUI : MonoBehaviour
     void GoToKits()
     {
         kitMessage.text = "";
+        kits.FreeFinishedKits();
         int available = kits.CountAvailable();
 
         for (int i = 0; i < kitButtons.Length; i++)
@@ -312,6 +313,7 @@ public class KioskUI : MonoBehaviour
 
     void GoToAlternatives()
     {
+        kits.FreeFinishedKits();
         int next = kits.NextFreeKit();
         if (next == -1)
         {

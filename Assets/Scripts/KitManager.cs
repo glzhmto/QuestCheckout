@@ -26,7 +26,23 @@ public class KitManager : MonoBehaviour
         else
         {
             Load();
+            FreeFinishedKits();
         }
+    }
+
+    // kits whose loan or charging time is over are available again
+    public void FreeFinishedKits()
+    {
+        bool changed = false;
+        for (int i = 0; i < KitCount; i++)
+        {
+            if (status[i] != Available && freeAt[i] <= DateTime.Now)
+            {
+                status[i] = Available;
+                changed = true;
+            }
+        }
+        if (changed) Save();
     }
 
     public bool IsAvailable(int kit)
