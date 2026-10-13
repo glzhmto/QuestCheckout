@@ -14,7 +14,7 @@ The student picks a kit, checks its items, picks the duration, reviews (and can 
 - Figma: https://www.figma.com/design/DuTTjp4lgwnO90iWBKXV1Y/Project01
 - [Design](docs/design.md) · [Testing](docs/testing.md) · [AI use](docs/ai-use.md)
 - Release: https://github.com/glzhmto/QuestCheckout/releases
-- Demo video:
+- Demo video: https://drive.google.com/drive/folders/1TTMye28UmGv2lhOkaLbfrGeStCjbt4pa?usp=sharing
 
 ## Setup
 Unity **6000.3.8f1**. Clone the repo, open it with Unity Hub, open `Assets/Scenes/Kiosk.unity` and press Play.
