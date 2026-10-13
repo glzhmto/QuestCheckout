@@ -258,7 +258,7 @@ public class KioskUI : MonoBehaviour
             else
             {
                 // in testing someone tried to pick 120, so it has to look blocked
-                text += "\nUNAVAILABLE";
+                text += "\nBLOCKED";
                 durationTexts[i].color = new Color(0.6f, 0.6f, 0.6f);
                 durationButtons[i].image.color = new Color(0.95f, 0.95f, 0.95f);
             }
