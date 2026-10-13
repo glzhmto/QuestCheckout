@@ -21,6 +21,8 @@ Build tested: v1.0.0 (Mac build from commit 02158fd)
 | P2 | B | Yes | 14.56s | 0 | None | Direct interaction with no availability screen; immediately clicked "See Alternatives" and registered. |
 | P3 | A | Yes | 28.12s | 1 | None | Tried selecting 120 min duration option. Read warning text about class reservation at 12:00 PM, adjusted to 90 min and finished. |
 | P3 | B | Yes | 16.40s | 0 | None | Quickly identified wait time details on Alternatives screen and requested notification. |
+| **P4 (Retest)** | **A** | **Yes** | **20.15s** | **0** | **None** | **Noticed explicit text on disabled Next button indicating missing checklist items. Checked all items without hesitation and selected 90 min directly.** |
+| **P4 (Retest)** | **B** | **Yes** | **13.80s** | **0** | **None** | **The participant had a smooth and intuitive interaction, with zero errors.** |
 
 ## Fixes
 ### Fix 1
