@@ -257,8 +257,10 @@ public class KioskUI : MonoBehaviour
             }
             else
             {
-                text += "\nReserved 12:00 PM";
+                // in testing someone tried to pick 120, so it has to look blocked
+                text += "\nUNAVAILABLE";
                 durationTexts[i].color = new Color(0.6f, 0.6f, 0.6f);
+                durationButtons[i].image.color = new Color(0.95f, 0.95f, 0.95f);
             }
             if (durations[i] == selectedDuration) text = "> " + text;
             durationTexts[i].text = text;
